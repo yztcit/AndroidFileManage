@@ -125,7 +125,7 @@ public class AllMainFragment extends BaseFragment {
             }
             tv_all_size.setText(getString(R.string.size, FileUtil.FormetFileSize(count)));
         }
-        tv_send.setText(getString(R.string.send, "" + mList.size()));
+        tv_send.setText(getString(R.string.send, mList.size()));
     }
 
 
@@ -138,7 +138,7 @@ public class AllMainFragment extends BaseFragment {
     public void initView() {
 
         tv_all_size.setText(getString(R.string.size, "0B"));
-        tv_send.setText(getString(R.string.send, "0"));
+        tv_send.setText(getString(R.string.send, 0));
         SystemUtil.init(getActivity());
         updateSizAndCount();
 

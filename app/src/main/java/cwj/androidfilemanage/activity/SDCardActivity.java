@@ -74,7 +74,7 @@ public class SDCardActivity extends baseActivity {
     @Override
     public void initViewAndEvent() {
         tv_all_size.setText(getString(R.string.size, "0B"));
-        tv_send.setText(getString(R.string.send, "0"));
+        tv_send.setText(getString(R.string.send, 0));
         path = getIntent().getStringExtra("path");
         tv_title_middle.setText(getIntent().getStringExtra("name"));
         mSDCardPath = new File(path);
@@ -123,7 +123,7 @@ public class SDCardActivity extends baseActivity {
             }
             tv_all_size.setText(getString(R.string.size, FileUtil.FormetFileSize(count)));
         }
-        tv_send.setText(getString(R.string.send, "" + mList.size()));
+        tv_send.setText(getString(R.string.send, mList.size()));
     }
 
     @Override
